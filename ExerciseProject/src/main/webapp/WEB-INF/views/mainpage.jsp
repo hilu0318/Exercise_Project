@@ -19,8 +19,9 @@
 						<a href="#" class="list-group-item">초기설정 - 1</a>
 						<a href="/step01/dboneprint" class="list-group-item">step 1. 단일 DB 값 페이지에 출력</a>
 						<a href="/step02/dblistprint" class="list-group-item">step 2. 여려 DB 값 페이지에 출력</a>
-						<a href="/step03/dbinsert" class="list-group-item">step 3-1. DB 에 문자 입력 후 목록 출력 - No Pagination</a>
-						<a href="/step03/dbinsert" class="list-group-item">step 3-2. DB 에 문자 입력 후 목록 출력 - Pagination</a>
+						<a href="/step03/dbinsert" class="list-group-item">step 3. DB 에 문자 입력 후 목록 출력</a>
+						<a href="/step04/pagination" class="list-group-item">step 4. Pagination</a>
+						<a href="/step05/listcount" class="list-group-item">step 5. 게시물 목록 개수 변경</a>
 					</div>
 				</div>
 			</div>

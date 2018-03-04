@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.hilu0318.service.Step03Service;
+import kr.hilu0318.utils.Pagination;
 
 @Controller
 @RequestMapping("/step03")
@@ -19,11 +20,11 @@ public class Step03Controller {
 
 	@Inject
 	private Step03Service service;
-	
+		
 	@RequestMapping(value="/dbinsert", method = RequestMethod.GET)
 	public String dbInsertGET(Model model) {
 		try {
-			List<Map> list = service.selectListService();
+			List<Map> list = service.dataListService();
 			model.addAttribute("list", list);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,13 +33,12 @@ public class Step03Controller {
 	}
 	
 	@RequestMapping(value="/register", method = RequestMethod.GET)
-	public String sss(Model model, @RequestParam("data")String data) {
+	public String dbInsertGET(Model model, @RequestParam("data")String data) {
 		try {
-			List<Map> list = service.registerService(data);
-			model.addAttribute("list", list);
+			service.dataRegisterService(data);
 		} catch (Exception e) { 
 			e.printStackTrace();
 		}
-		return "step/03/datainsert";
-	}
+		return "redirect:/step03/dbinsert";
+	}	
 }

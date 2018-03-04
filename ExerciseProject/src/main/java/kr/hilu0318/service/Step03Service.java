@@ -16,13 +16,11 @@ public class Step03Service {
 	@Inject
 	private Step03DAO dao;
 	
-	public List<Map> selectListService() throws Exception{
+	public List<Map> dataListService() throws Exception{
 		return dao.selectList();
 	}
 	
-	@Transactional
-	public List<Map> registerService(String data) throws Exception{
-		dao.insertData(data);
-		return dao.selectList();
+	public void dataRegisterService(String data) throws Exception{
+		dao.insertData(data);		
 	}
 }

@@ -4,7 +4,8 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.hilu0318.mapper.Step03">
-
+	
+	<!-- Step3-1 -->
 	<insert id="insertData">
 	insert into step_03(data) value(#{data})
 	<!--
@@ -26,5 +27,6 @@
 	<select id="selectList" resultType="hash">
 	select no, data from step_03 order by no asc
 	</select>
+	
 	
 </mapper>

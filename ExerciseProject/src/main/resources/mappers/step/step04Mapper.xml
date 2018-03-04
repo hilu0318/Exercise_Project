@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.hilu0318.mapper.Step04">
+	
+	<select id="selectTotalCount" resultType="int">
+	select count(*) from step_04
+	</select>
+	
+	<select id="selectListLimit" resultType="hash">
+	select no, data from step_04 order by no desc limit #{start}, #{count}
+	<!-- 
+	limit a, b
+	a : 시작 순번. 0부터 시작됨.
+	b : 읽어 올 레코드 개수.
+	 -->
+	</select>
+	
+</mapper>
