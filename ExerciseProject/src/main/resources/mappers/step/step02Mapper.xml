@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.hilu0318.mapper.Step02">
+
+	<select id="selectDatalist" resultType="String">
+	select data from step_02 order by no asc
+	<!--
+	기본 : 오름차순 정렬
+	
+	** order by 사용 시. 
+	데이터를 오름차순 or 내림차순으로 정렬 가능.
+	기본 코드	: order by COLUMN_NAME <정렬방법>
+		<정렬방법>
+		1. asc	: 오름차순	( order by COLUMN_NAME asc )
+		2. desc	: 내림차순	( order by COLUMN_NAME desc )
+	 -->
+	</select>
+	
+</mapper>

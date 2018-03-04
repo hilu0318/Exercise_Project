@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.hilu0318.mapper.Step01">
+	<select id="selectDataOne" resultType="String">
+	select data from step_01
+	<!-- 
+	Test및 실습용 step_01테이블에는 하나의 레코드만 존재한다.
+	그래서 위 코드만으로도 하나의 레코드 값을 가져올 수 있다.
+	
+	하지만, 실제로 테이블에는 하나 이상의 레코드가 존재하고 
+	이러한 상황에서 하나의 값 또는 하나의 레코드 값들을 받아오려면
+	where 절 등을 사용해서 조회하려는 레코드를 특정해야함.
+	 -->
+	</select>
+</mapper>

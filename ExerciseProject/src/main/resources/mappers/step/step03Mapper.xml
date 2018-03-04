@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.hilu0318.mapper.Step03">
+
+	<insert id="insertData">
+	insert into step_03(data) value(#{data})
+	<!--
+	#{ DATA_NAME }
+	데이터 베이스에 값을 입력해야 하는 상황에서 사용된다.
+	1. insert문으로 특정 '값'을 입력해야 할 때.
+	2. where절을 사용하면서 특정 '값'에 부합하는 조건으로 검색을 수행할 때
+	3. update문으로 기존의 레코드에 업데이트 해야할 '값'을 넣어야 할 때
+	등...
+	
+	DATA_NAME 규칙
+	1. DAO에서 매개변수로 전달할 값이 기본자료형이면 변수 이름과 DATA_NAME을 똑같이 둔다.
+	2. DAO에서 Reference Type을 매개변수로 넣을 경우
+		a. Map Collection을 사용하면, key값과  DATA_NAME을 똑같이 둔다.
+		b. DTO등 Getter, Setter가 정의된 클래스를 사용하면 클래스 변수의 이름과 DATA_NAME을 똑같이 둔다. 
+	-->
+	</insert>
+
+	<select id="selectList" resultType="hash">
+	select no, data from step_03 order by no asc
+	</select>
+	
+</mapper>
