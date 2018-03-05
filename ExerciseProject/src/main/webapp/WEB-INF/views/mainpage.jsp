@@ -5,6 +5,7 @@
 <html>
 <head>
 	<title></title>
+	
 	<%@ include file="/WEB-INF/views/import/css.jspf" %>
 	
 </head>
@@ -22,6 +23,8 @@
 						<a href="/step03/dbinsert" class="list-group-item">step 3. DB 에 문자 입력 후 목록 출력</a>
 						<a href="/step04/pagination" class="list-group-item">step 4. Pagination</a>
 						<a href="/step05/listcount" class="list-group-item">step 5. 게시물 목록 개수 변경</a>
+						<a href="/step06/multipart" class="list-group-item">step 6. 폼 전송 및 파일 전송</a>
+						<a href="/step07/save" class="list-group-item">step 7. 이미지 저장 및 출력</a>
 					</div>
 				</div>
 			</div>

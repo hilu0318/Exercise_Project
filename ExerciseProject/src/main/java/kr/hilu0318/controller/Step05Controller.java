@@ -22,16 +22,21 @@ public class Step05Controller {
 	private Step05Service service;
 	
 	private final int numOfPage = 10;	//PGN 수
+	private final int maxLine = 30;
 	
 	@RequestMapping(value="/listcount", method = RequestMethod.GET)
 	public String dbInsertPageGET(Model model, 
 			@RequestParam(value="currentPage" , required=false, defaultValue="1" ) int currentPage, 
 			@RequestParam(value="count"		  , required=false, defaultValue="10") int count) {
 		try {
+			if(count > maxLine)
+				count = maxLine;
+			
 			int total = service.totalCount();
 			int lastPage = total % count > 0 ? total/count + 1 : total/count;
 			if(currentPage > lastPage)
 				currentPage = 1;
+			
 			int start = (currentPage * count) - count;
 			
 			List<Map> list = service.dataListLimitService(start, count);
